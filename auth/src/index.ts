@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { app } from "./app";
 const start = async () => {
+	console.log("Starting up...");
 	// do this check so know when we do deploy that something is wrong not after when applicaton has been running for some time
 	if (!process.env.JWT_KEY) {
 		throw new Error("JWT_KEY must be defined in yaml file");
